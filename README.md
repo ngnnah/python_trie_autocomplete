@@ -9,7 +9,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ![trie example](trie_eg.png)
 
 
-### Some cool demos, from text files:
+### Some cool demos, read from the following text files:
 
   - [Pride and Prejudice by Jane Austen](https://www.gutenberg.org/files/1342/1342-0.txt)
   - [Alice's Adventures in Wonderland by Lewis Carroll](https://www.gutenberg.org/files/11/11-0.txt)
@@ -19,7 +19,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 
 
 
-
+---
 1. In Alice's Adventures in Wonderland: 
 
   * What are the six most common sentences (regardless of prefix)?
@@ -42,7 +42,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ```
 
 
-
+---
 2. In Metamorphosis:
 
   * what are the six most common words starting with `gre`? 
@@ -50,7 +50,6 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
     trie = make_word_trie(text)
     print(autocomplete(trie, 'gre', 6))
     >>> ['gregor', 'gregors', 'grete', 'great', 'gretes', 'greatest']
-
 ```
 
   * what are all of the words matching the pattern c*h, along with their counts?
@@ -60,7 +59,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ```
 
 
-
+---
 3. In A Tale of Two Cities, what are all of the words matching the pattern r?c*t, along with their counts? 
 ```
     print(word_filter(trie, 'r?c*t'))
@@ -68,7 +67,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ```
 
 
-
+---
 4. What are all autocorrections for 'hear' in Pride and Prejudice?
 ```
     print(autocorrect(trie, 'hear'))
@@ -76,7 +75,7 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ```
 
 
-
+---
 5. How many distinct words are in Dracula? How many total words are in Dracula?
 ```
     print(len(list(trie)))
