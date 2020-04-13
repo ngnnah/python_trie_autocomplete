@@ -9,7 +9,16 @@ For example, `make_word_trie("bat bat bark bar")` returns a trie looks like this
 ![trie example](trie_eg.png)
 
 
-Some cool demos:
+### Some cool demos, from text files:
+
+  - [Pride and Prejudice by Jane Austen](https://www.gutenberg.org/files/1342/1342-0.txt)
+  - [Alice's Adventures in Wonderland by Lewis Carroll](https://www.gutenberg.org/files/11/11-0.txt)
+  - [Dracula by Bram Stoker](http://www.gutenberg.org/cache/epub/345/pg345.txt)
+  - [A Tale of Two Cities by Charles Dickens](https://www.gutenberg.org/files/98/98-0.txt)
+  - [Metamorphosis by Franz Kafka](http://www.gutenberg.org/cache/epub/5200/pg5200.txt)
+
+
+
 
 1. In Alice's Adventures in Wonderland: 
 
@@ -32,6 +41,8 @@ Some cool demos:
     >>> ['hear', 'head', 'hearthrug', 'near', 'hearth', 'her', 'hearts', 'hearing', 'dear', 'heart', 'ear', 'heard']
 ```
 
+
+
 2. In Metamorphosis:
 
   * what are the six most common words starting with `gre`? 
@@ -48,17 +59,23 @@ Some cool demos:
     >>> [('cough', 1), ('couch', 17), ('catch', 4), ('cash', 2), ('childish', 1), ('crash', 1)]
 ```
 
+
+
 3. In A Tale of Two Cities, what are all of the words matching the pattern r?c*t, along with their counts? 
 ```
     print(word_filter(trie, 'r?c*t'))
     >>> [('receipt', 4), ('recent', 1), ('recognisant', 1), ('recollect', 1), ('reconcilement', 1), ('richest', 2)]
 ```
 
+
+
 4. What are all autocorrections for 'hear' in Pride and Prejudice?
 ```
     print(autocorrect(trie, 'hear'))
     >>> ['heal', 'her', 'heard', 'wear', 'tear', 'dear', 'year', 'heartening', 'hearth', 'heartfelt', 'hera', 'fear', 'hears', 'heart', 'ear', 'near', 'head', 'heartily', 'hear', 'bear', 'hearers', 'hearty', 'hearing']
 ```
+
+
 
 5. How many distinct words are in Dracula? How many total words are in Dracula?
 ```
