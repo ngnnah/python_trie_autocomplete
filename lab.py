@@ -263,37 +263,37 @@ if __name__ == '__main__':
     doctest.testmod()
    
 
-    # with open("alice.txt", encoding="utf-8") as f:
-    #     text = f.read()
-    #     trie = make_phrase_trie(text)
-    #     print(autocomplete(trie, tuple(), 6))
-    #     [('said', 'alice'), ('thought', 'alice'), ('wow',), ('said', 'the', 'caterpillar'), ('said', 'the', 'march', 'hare'), ('beauootiful', 'soooop')]
-    #     print(len(tokenize_sentences(text)))
-    #     print(len(list(trie)))
+    with open("alice.txt", encoding="utf-8") as f:
+        text = f.read()
+        trie = make_phrase_trie(text)
+        print(autocomplete(trie, tuple(), 6))
+        [('said', 'alice'), ('thought', 'alice'), ('wow',), ('said', 'the', 'caterpillar'), ('said', 'the', 'march', 'hare'), ('beauootiful', 'soooop')]
+        print(len(tokenize_sentences(text)))
+        print(len(list(trie)))
 
-    #     trie = make_word_trie(text)
-    #     print(autocorrect(trie, 'hear', 12))
+        trie = make_word_trie(text)
+        print(autocorrect(trie, 'hear', 12))
         
         
-    # with open("metamorphosis.txt", encoding='utf-8') as f:
-    #     text = f.read()
-    #     trie = make_word_trie(text)
-    #     print(autocomplete(trie, 'gre', 6))
-    #     print(word_filter(trie, 'c*h'))
+    with open("metamorphosis.txt", encoding='utf-8') as f:
+        text = f.read()
+        trie = make_word_trie(text)
+        print(autocomplete(trie, 'gre', 6))
+        print(word_filter(trie, 'c*h'))
 
-    # with open("twocities.txt", encoding="utf-8") as f:
-    #     text = f.read()
-    #     trie = make_word_trie(text)
-    #     print(word_filter(trie, 'r?c*t'))
+    with open("twocities.txt", encoding="utf-8") as f:
+        text = f.read()
+        trie = make_word_trie(text)
+        print(word_filter(trie, 'r?c*t'))
 
-    # with open("pride_prejudice.txt", encoding="utf-8") as f:
-    #     text = f.read()
-    #     trie = make_word_trie(text)
-    #     print(autocorrect(trie, 'hear'))
+    with open("pride_prejudice.txt", encoding="utf-8") as f:
+        text = f.read()
+        trie = make_word_trie(text)
+        print(autocorrect(trie, 'hear'))
 
-    # with open("dracula.txt", encoding="utf-8") as f:
-    #     # distinct words
-    #     text = f.read()
-    #     trie = make_word_trie(text)
-    #     print(len(list(trie)))
-    #     print(sum([len(sen.split()) for sen in tokenize_sentences(text)]))
+    with open("dracula.txt", encoding="utf-8") as f:
+        # distinct words
+        text = f.read()
+        trie = make_word_trie(text)
+        print(len(list(trie)))
+        print(sum([len(sen.split()) for sen in tokenize_sentences(text)]))
