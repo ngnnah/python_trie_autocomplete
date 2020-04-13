@@ -13,7 +13,7 @@ Some cool demos:
 
 1. In Alice's Adventures in Wonderland: 
 
-..* What are the six most common sentences (regardless of prefix)?
+  * What are the six most common sentences (regardless of prefix)?
 ```
     trie = make_phrase_trie(text)
     print(autocomplete(trie, tuple(), 6))
@@ -25,7 +25,7 @@ Some cool demos:
     >>> 1770 total sentences
 ```
 
-..* What are the top 12 autocorrections for 'hear'?
+  * What are the top 12 autocorrections for 'hear'?
 ```
     trie = make_word_trie(text)
     print(autocorrect(trie, 'hear', 12))
@@ -34,7 +34,7 @@ Some cool demos:
 
 2. In Metamorphosis:
 
-..* what are the six most common words starting with `gre`? 
+  * what are the six most common words starting with `gre`? 
 ```
     trie = make_word_trie(text)
     print(autocomplete(trie, 'gre', 6))
@@ -42,7 +42,7 @@ Some cool demos:
 
 ```
 
-..* what are all of the words matching the pattern c*h, along with their counts?
+  * what are all of the words matching the pattern c*h, along with their counts?
 ```
     print(word_filter(trie, 'c*h'))
     >>> [('cough', 1), ('couch', 17), ('catch', 4), ('cash', 2), ('childish', 1), ('crash', 1)]
